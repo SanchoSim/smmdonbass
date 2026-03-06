@@ -150,15 +150,29 @@ foreach ($cats as $c) {
 
 <select name="platform">
 <option value="">Все платформы</option>
-<option value="Telegram">Telegram</option>
-<option value="VK">VK</option>
-<option value="MAX">MAX</option>
+<?php
+$platforms = ['Telegram','VK','MAX'];
+foreach ($platforms as $p) {
+    $selected = ($_GET['platform'] ?? '') === $p ? 'selected' : '';
+    echo "<option value=\"$p\" $selected>$p</option>";
+}
+?>
+
+
 </select>
 
 <select name="type">
-<option value="">Тип</option>
-<option value="channel">Канал</option>
-<option value="chat">Чат / Группа</option>
+<option value="">Все типы</option>
+<?php
+$types = ['channel'=>'Канал','chat'=>'Чат / Группа'];
+foreach ($types as $v=>$s) {
+    $selected = ($_GET['type'] ?? '') === $v ? 'selected' : '';
+    echo "<option value=\"$v\" $selected>$s</option>";
+}
+?>
+
+<!-- <option value="channel">Канал</option>
+<option value="chat">Чат / Группа</option> -->
 </select>
 
 <?php if ($view === 'cards'): ?>
