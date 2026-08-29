@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $stmt = $pdo->prepare("
         INSERT INTO resources 
-        (name, url, status, platform, category, type, subscribers, description, priority, price)
+        (name, url, status, platform, category, type, subscribers, description, priority, price, pin_price)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ");
 
