@@ -1,0 +1,56 @@
+в самом начале. На локалке
+git init
+.gitignore файл создать
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/USERNAME/smmdonbass.git
+git branch -M main
+git push -u origin main
+
+---работа---
+git add .
+git commit -m "что-то изменил"
+git push
+
+git pull
+
+--------------
+
+git status
+
+git log --oneline
+git log --oneline
+git diff
+git show HASH
+
+
+
+Чтобы увидеть, что за коммит появился, 
+ты можешь использовать команду git fetch для обновления информации 
+о удалённом репозитории, а затем git log origin/main..HEAD
+
+git log -p HEAD..origin/main
+
+Она означает:
+Покажи коммиты, которые есть в origin/main,
+но которых нет в моей текущей ветке
+
+
+git branch
+git branch -a показать текущую ветку
+
+git checkout -b main origin/main
+Что это делает:
+создаёт локальную ветку main
+связывает её с origin/main
+переключает тебя на неё
+
+git checkout main
+переключится на локальную ветку main
+
+
+на сервере:
+git init
+git remote add origin https://github.com/SanchoSim/smmdonbass.git
+git fetch origin
+git reset --hard origin/main

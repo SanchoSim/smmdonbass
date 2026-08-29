@@ -3,3 +3,4 @@ config.local.php
 /vendor
 /node_modules
 *.log
+test.php
